@@ -1,13 +1,3 @@
-# 环境说明
-
-|应用名|描述|端口|资源地址|
-|----|----|----|----|
-|cas-overlay-template|CAS SERVER|8443|/cas/login|
-|cas-management-overlay|CAS服务管理端|8444|/cas-management|
-|user_center|用户认证中心，实现了CAS SERVER的认证接口。目前是静态的只支持xuda/123|8000|/login|
-|app|应用1|8880|/index|
-|app2|应用2|8881|/index2|
-
 # CAS搭建及简单Demo实现单点登录
 
 ## 环境
@@ -15,7 +5,6 @@
 - docker 19.03.3
 - cas v5.3.x
 - JDK 1.8
-- gradle 4.10
 ## 本地搭建
 ### 拉取仓库并部署运行
 - 从Github拉取CAS的[cas-overlay-template(maven)](https://github.com/apereo/cas-overlay-template/tree/5.3),[cas-gradle-overlay-template]()用于采用覆盖机制，打成可部署的包。接下来自定义策略等需要在该仓库的基础上进行定制，官方推荐采用`WAR Overlay method`方式进行部署。[官方文档](https://apereo.github.io/cas/5.3.x/installation/Maven-Overlay-Installation.html)
@@ -455,5 +444,6 @@ ENTRYPOINT (sleep 30 && sh -c '/bin/echo -e "y"| keytool -importcert -file cas.c
            tail -f /dev/null
 ```
 
+## 示例代码
 
 
