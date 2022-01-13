@@ -434,7 +434,7 @@ C:\Program Files\Java\jdk1.8.0_161\jre\lib\security>keytool -importcert -file D:
 目前通过拷贝`war`包的形式，以`java -jar`在容器中运行，要求JDK1.8+
 ```
 # 指定JRE版本
-FROM docker.koal.com:8855/builder:gradle-4.10.2-openjdk-7-openjdk-8-docker-18
+FROM xxxxxxxx/builder:gradle-4.10.2-openjdk-7-openjdk-8-docker-18
 
 #作者
 MAINTAINER xuda@koal.com
